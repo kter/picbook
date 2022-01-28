@@ -10,14 +10,16 @@
     <div id="app">
       <ul>
         <li v-for="picture in pictures">
+          <div>{{ picture.userId }}</div>
           <div>{{ picture.name }}</div>
           <div>{{ picture.url }}</div>
           <div>{{ picture.description }}</div>
         </li>
       </ul>
-      <input v-model-"name" placeholder="name">
-      <input v-model-"url" placeholder="url">
-      <input v-model-"description" placeholder="description">
+      <input v-model="userId" placeholder="userId">
+      <input v-model="name" placeholder="name">
+      <input v-model="url" placeholder="url">
+      <input v-model="description" placeholder="description">
       <button v-on:click="add">add</button>
     </div>
     <script src="/app.js"></script>
