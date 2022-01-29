@@ -27,14 +27,13 @@ const app = new Vue({
         })
     },
     retrieveAndSetPicture: () => {
-      alert('success!')
       const payload = {
         'userId': "3"
       }
       axios.get('https://dtv8xadmd9.execute-api.ap-northeast-1.amazonaws.com/dev', {params: payload})
         .then((response) => {
           console.log(response)
-          app.components = response.data || []
+          app.pictures = response.data.Items || []
         })
         .catch((err) => {
           alert(err.response.data.error)
