@@ -19,8 +19,8 @@ const app = new Vue({
         'description': app.description
       }
       axios.post('https://dtv8xadmd9.execute-api.ap-northeast-1.amazonaws.com/dev', payload)
-        .then(() => {
-          alert('success!')
+        .then((response) => {
+          console.log(response)
         })
         .catch((err) => {
           alert(err.response.data.error)
