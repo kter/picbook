@@ -20,6 +20,7 @@
       <input v-model="name" placeholder="name">
       <input v-model="url" placeholder="url">
       <input v-model="description" placeholder="description">
+      <input type="file" @change="onFileChange($event, file)")/>
       <button v-on:click="add">add</button>
     </div>
     <script src="/app.js"></script>
