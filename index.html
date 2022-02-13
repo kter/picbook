@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Top</title>
-    <script src="http://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
@@ -20,9 +20,10 @@
       <input v-model="name" placeholder="name">
       <input v-model="url" placeholder="url">
       <input v-model="description" placeholder="description">
-      <input type="file" @change="onFileChange($event, file)")/>
-      <button v-on:click="add">add</button>
+      <input type="file" @change="onFileChange"/>
+      <button @click="add">add</button>
     </div>
+    <div>
     <script src="/app.js"></script>
   </body>
 </html>
